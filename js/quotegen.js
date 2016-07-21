@@ -23,9 +23,18 @@ function getNewQuote(){
             updateQuote);
 }
 
+//Open new window with tweet ready with current quote
+function tweet(){
+  var author = $(".quote-author").text();
+  var quote = $(".quote-text").text();
+  window.open("https://twitter.com/intent/tweet?text="+quote+" "+author+"&hashtags=FamousQuotes");
+}
+
 
 $(document).ready(function(){
   getNewQuote();//Get first quote for page load
 
   $("#newquote").on("click", getNewQuote);//Associate getNewQuote with button
+
+  $("#twitter-share").on("click", tweet);
 });
