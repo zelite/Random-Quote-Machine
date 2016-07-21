@@ -23,7 +23,8 @@ function getNewQuote(){
 }
 
 
+$(document).ready(function(){
+  getNewQuote();//Get first quote for page load
 
-getNewQuote();//Get first quote for page load
-
-$("#newquote").on("click", getNewQuote);//Associate getNewQuote with button
+  $("#newquote").on("click", getNewQuote);//Associate getNewQuote with button
+});
