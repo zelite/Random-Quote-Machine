@@ -3,7 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Random Quote Generator</title>
+    <title>Random Quote Machine</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <!-- Milligram CSS minified -->
+    <link rel="stylesheet" href="css/milligram.min.css">
+    <script src="https://use.fontawesome.com/4136aee823.js"></script>
   <body>
     <main>
       <div class="quote">
@@ -12,16 +19,16 @@
         </p>
         <div class="quote-author"></div>
       </div>
-      <button id="twitter-share" href>Twitter</button>
-      <button disabled>Tumblr</button>
-      <button disabled>Facebook</button>
-      <button id="newquote">New Quote</button>
+      <button id="twitter-share" href><i class="fa-lg fa-twitter"></i></button>
+      <button id="copy-clipboard"><i class="fa-lg fa-copy"></i>Copy quote</button>
+      <button id="newquote"><i class="fa-lg fa-refresh"></i>New Quote</button>
     </main>
 
     <script   src="https://code.jquery.com/jquery-3.1.0.min.js"
     integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
     crossorigin="anonymous"></script>
 
+    <script src="js/clipboard.min.js"></script>
     <script src="js/quotegen.js"></script>
   </body>
 </html>
