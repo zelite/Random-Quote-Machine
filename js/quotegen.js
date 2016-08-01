@@ -30,6 +30,11 @@ function tweet(){
   window.open("https://twitter.com/intent/tweet?text="+quote+" "+author+"&hashtags=FamousQuotes");
 }
 
+//Copy to clipboard
+new Clipboard("#copy-clipboard");
+
+$("#copy-clipboard").attr("data-clipboard-target", ".quote");
+
 
 $(document).ready(function(){
   getNewQuote();//Get first quote for page load
