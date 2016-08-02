@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Random Quote Machine</title>
     <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,300italic,700,700italic">
     <!-- CSS Reset -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
     <!-- Milligram CSS minified -->
@@ -14,16 +14,20 @@
     <script src="https://use.fontawesome.com/4136aee823.js"></script>
   <body>
     <main>
-      <div class="quote clearfix">
+      <div class="quote">
+
         <p class="quote-text">
 
         </p>
         <div class="quote-author"></div>
       </div>
-      <button id="twitter-share" class="float-left" href><i class="fa fa-lg fa-twitter"></i></button>
-      <button id="copy-clipboard" class="float-right"><i class="fa fa-lg fa-copy"></i> Copy quote</button>
-      <button id="newquote" class="float-right"><i class="fa fa-lg fa-refresh"></i> New Quote</button>
+      <div class="buttons clearfix">
+      <button id="twitter-share" class="button-colored float-left"><i class="fa fa-2x fa-twitter"></i></button>
+      <button id="copy-clipboard" class="button-colored float-left"><i class="fa fa-2x fa-copy"></i> Copy</button>
+      <button id="newquote" class="button-colored float-right"><i class="fa fa-2x fa-refresh"></i> New Quote</button>
+    </div>
     </main>
+    <footer>made by <a href="http://zelite.github.io/">Zelite</a></footer>
 
     <script   src="https://code.jquery.com/jquery-3.1.0.min.js"
     integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="

@@ -2,17 +2,63 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #E74C3C;
+  transition: background-color 2s;
+}
+
 main{
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  border: 1.5px black solid;
+  margin-top: 20vh;
+  background-color: #fff;
+  border-radius: 0.3rem;
+}
+
+.quote{
+  padding: 3rem;
+  color: #E74C3C;
+  transition: color 2s;
 }
 
 .quote-text{
   text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: 'Roboto Slab', serif;
 }
 
 .quote-author{
   text-align: right;
+  font-family: 'Roboto Slab', serif;
+}
+
+.buttons{
+  padding: 2rem;
+}
+
+.fa-2x{
+  vertical-align: middle;
+}
+
+button{
+  margin: 0.2rem;
+
+}
+
+.button-colored{
+  transition: background-color 2s, border-color 2s;
+  background-color: #E74C3C;
+  border-color: #E74C3C;
+}
+
+footer{
+  text-align: center;
+  margin-top: 2.0rem;
+  color: white;
+}
+
+footer a {
+  color: #AED6F1;
 }

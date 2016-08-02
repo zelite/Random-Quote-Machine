@@ -3,15 +3,21 @@ function getNewQuote(){
   //Changes the text of elements with class .quote-text
   //and .quote-author to have the corresponding
   //values on the json
-
+  var leftQuoteIcon = "<i class='fa fa-quote-left'></i> ";
   //callback function that actually updates the DOM
   function updateQuote(json){
-    $(".quote-text").text(json.quoteText);
+    $(".quote-text").fadeOut(1000, function() {
+      $(this).html(leftQuoteIcon+json.quoteText);
+    }).fadeIn(1000);
+
     var author = json.quoteAuthor;
     if (author === ""){//check if author is empty
       author= "Unknown";
     }
-    $(".quote-author").text("-- "+author);
+    $(".quote-author").fadeOut(1000, function() {
+      $(this).text("-- "+author);
+    }).fadeIn(1000);
+    colorChange();
   }
 
   //makes json request using jsonp method which circunvents cross origin problem
@@ -30,10 +36,18 @@ function tweet(){
   window.open("https://twitter.com/intent/tweet?text="+quote+" "+author+"&hashtags=FamousQuotes");
 }
 
-//Copy to clipboard
-new Clipboard("#copy-clipboard");
+function colorChange(){
+  var colors = ["#E74C3C", "#9B59B6", "#3498DB", "#1ABC9C", "#27AE60",
+                "#F1C40F", "#D35400", "#34495E", "#797D7F"];
+  var newColor = colors[Math.floor(Math.random()*(colors.length))];
+  //Change color of body, buttons and text
+  $("body").css("background-color", newColor);
+  $(".button-colored").css({"background-color": newColor,
+                           "border-color": newColor});
+  $(".quote").css("color", newColor);
 
-$("#copy-clipboard").attr("data-clipboard-target", ".quote");
+}
+
 
 
 $(document).ready(function(){
@@ -42,4 +56,9 @@ $(document).ready(function(){
   $("#newquote").on("click", getNewQuote);//Associate getNewQuote with button
 
   $("#twitter-share").on("click", tweet);
+
+  //Copy to clipboard
+  new Clipboard("#copy-clipboard");
+
+  $("#copy-clipboard").attr("data-clipboard-target", ".quote");
 });
