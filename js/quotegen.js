@@ -20,7 +20,7 @@ function getNewQuote(){
     colorChange();
   }
 
-  //makes json request using jsonp method which circunvents cross origin problem
+  //makes json request
   $.getJSON("https://crossorigin.me/http://api.forismatic.com/api/1.0/",
             {_: new Date().getTime(), //to prevent caching http://stackoverflow.com/a/31948654/1952996
             method: "getQuote",
